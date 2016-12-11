@@ -1,4 +1,10 @@
-
+/*
+ * Klasa Room reprezuntuj¹ca pokoje firmy
+ * 
+ * Autor: Miko³aj Brukiewicz
+ * Indeks: 225954
+ * Data: 11.12.2016
+ */
 public class Room implements Comparable<Room> {
 	
 	private String symbol;
@@ -58,7 +64,15 @@ public class Room implements Comparable<Room> {
 		if(!(o instanceof Room))
 			return false;
 		Room x = (Room)o;
-		return x.symbol == symbol && x.pokoj == pokoj;
+		return x.symbol.equals(symbol) && x.pokoj == pokoj;
+	}
+	
+	@Override
+	public int hashCode(){
+		int result = 17;
+		result = 31 * result + pokoj;
+		result = 31 * result + symbol.hashCode();
+		return result;
 	}
 
 }

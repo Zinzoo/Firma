@@ -1,3 +1,11 @@
+/*
+ * Program umo¿liwiaj¹cy operacje na klasie Room
+ * 
+ * Autor: Miko³aj Brukiewicz
+ * Indeks: 225954
+ * Data: 11.12.2016
+ */
+
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -99,12 +107,13 @@ public class Firma extends JFrame implements ActionListener {
 		} else
 
 		if (zrodlo == przycisk_usun) {
-			/*wartosc = pole_budynek.getText();
+			wartosc.setSymbol(pole_budynek.getText());
+			wartosc.setPokoj(Integer.parseInt(pole_pokoj.getText()));
 			vectors.remove(wartosc);
 			array.remove(wartosc);
 			llist.remove(wartosc);
 			hash.remove(wartosc);
-			tree.remove(wartosc);*/
+			tree.remove(wartosc);
 		} else
 
 		if (zrodlo == przycisk_autor) {
